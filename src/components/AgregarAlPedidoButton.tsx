@@ -1,12 +1,27 @@
 "use client";
 
 import { useState } from "react";
+import { useCart } from "@/contexts/CartContext";
 
-export default function AgregarAlPedidoButton({ nombre }: { nombre: string }) {
+type Props = {
+  id: number;
+  nombre: string;
+  precio: number;
+  imagen_url: string | null;
+};
+
+export default function AgregarAlPedidoButton({
+  id,
+  nombre,
+  precio,
+  imagen_url,
+}: Props) {
+  const { addItem } = useCart();
   const [cantidad, setCantidad] = useState(1);
   const [agregado, setAgregado] = useState(false);
 
   function agregar() {
+    addItem({ id, nombre, precio, imagen_url }, cantidad);
     setAgregado(true);
     setTimeout(() => setAgregado(false), 2500);
   }
@@ -45,7 +60,7 @@ export default function AgregarAlPedidoButton({ nombre }: { nombre: string }) {
 
       {agregado && (
         <p role="status" className="mt-3 text-sm text-green-700">
-          ✓ Agregaste {cantidad} × {nombre}
+          ✓ Agregaste {cantidad} × {nombre} al carrito
         </p>
       )}
     </div>

@@ -104,7 +104,12 @@ export default async function ProductoPage({ params }: Props) {
             </>
           )}
 
-          <AgregarAlPedidoButton nombre={producto.nombre} />
+          <AgregarAlPedidoButton
+                  id={producto.id}
+                  nombre={producto.nombre}
+                  precio={producto.precio}
+                  imagen_url={producto.imagen_url}
+          />
         </div>
       </div>
     </article>
