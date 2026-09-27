@@ -45,17 +45,17 @@ export default async function CategoriaPage({ params }: Props) {
   // 5. Renderizar
   return (
     <section>
-      <Link href="/" className="text-sm font-medium text-amber-800 hover:underline">
+      <Link href="/" className="text-sm font-medium text-teal-dark hover:underline">
         ← Volver al inicio
       </Link>
 
-      <h1 className="mt-4 text-3xl font-bold">{categoria.nombre}</h1>
+      <h1 className="mt-4 text-3xl font-bold text-brown-dark">{categoria.nombre}</h1>
       {categoria.descripcion && (
-        <p className="mt-1 text-stone-600">{categoria.descripcion}</p>
+        <p className="mt-1 text-brown/70">{categoria.descripcion}</p>
       )}
 
       {productos.length === 0 ? (
-        <p className="mt-8 text-stone-600">Todavía no hay productos en esta categoría.</p>
+        <p className="mt-8 text-brown/70">Todavía no hay productos en esta categoría.</p>
       ) : (
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {productos.map((producto) => (

@@ -2,4 +2,12 @@
 
 @theme inline {
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+
+  --color-cream: #fdf3e7;
+  --color-cream-dark: #f7e2c4;
+  --color-teal: #8fbfc4;
+  --color-teal-dark: #3f8a93;
+  --color-brown: #6c452f;
+  --color-brown-dark: #4a2e1f;
+  --color-pink: #fc9cab;
 }

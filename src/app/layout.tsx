@@ -19,17 +19,17 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body className={`${geist.variable} bg-stone-50 text-stone-900 antialiased`}>
-        <header className="border-b border-stone-200 bg-white">
+      <body className={`${geist.variable} bg-cream text-brown-dark antialiased`}>
+        <header className="border-b border-teal/30 bg-white">
           <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-            <Link href="/" className="text-xl font-bold text-amber-800">
+            <Link href="/" className="text-xl font-bold text-teal-dark">
               🍰 Manos al horno
             </Link>
-            <div className="flex gap-5 text-sm font-medium text-stone-700">
-              <Link href="/categorias/slices" className="hover:text-amber-800">
+            <div className="flex gap-5 text-sm font-medium text-brown">
+              <Link href="/categorias/slices" className="hover:text-teal-dark">
                 Slices
               </Link>
-              <Link href="/categorias/completos" className="hover:text-amber-800">
+              <Link href="/categorias/completos" className="hover:text-teal-dark">
                 Completos
               </Link>
             </div>
@@ -38,7 +38,7 @@ export default function RootLayout({
 
         <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
 
-        <footer className="border-t border-stone-200 py-6 text-center text-sm text-stone-500">
+        <footer className="border-t border-teal/30 py-6 text-center text-sm text-brown/70">
           © Manos al horno · Postres hechos a mano
         </footer>
       </body>

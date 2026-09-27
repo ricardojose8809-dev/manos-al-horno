@@ -49,13 +49,13 @@ export default async function ProductoPage({ params }: Props) {
     <article>
       <Link
         href={producto.categorias ? `/categorias/${producto.categorias.slug}` : "/"}
-        className="text-sm font-medium text-amber-800 hover:underline"
+        className="text-sm font-medium text-teal-dark hover:underline"
       >
         ← Volver a {producto.categorias?.nombre ?? "inicio"}
       </Link>
 
       <div className="mt-6 grid gap-8 md:grid-cols-2">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone-100">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-cream-dark/40">
           {producto.imagen_url && (
             <Image
               src={producto.imagen_url}
@@ -70,32 +70,32 @@ export default async function ProductoPage({ params }: Props) {
 
         <div>
           {producto.categorias && (
-            <span className="text-xs font-medium uppercase tracking-wide text-amber-700">
+            <span className="text-xs font-medium uppercase tracking-wide text-teal-dark">
               {producto.categorias.nombre}
             </span>
           )}
-          <h1 className="mt-1 text-3xl font-bold">{producto.nombre}</h1>
-          <p className="mt-2 text-2xl font-bold text-amber-800">
+          <h1 className="mt-1 text-3xl font-bold text-brown-dark">{producto.nombre}</h1>
+          <p className="mt-2 text-2xl font-bold text-brown-dark">
             ${producto.precio.toFixed(2)}
           </p>
-          <p className="mt-1 text-sm text-stone-600">
+          <p className="mt-1 text-sm text-brown/70">
             {producto.porciones > 1
               ? `Rinde ${producto.porciones} porciones`
               : "1 porción"}
           </p>
 
           {producto.descripcion && (
-            <p className="mt-4 text-stone-700">{producto.descripcion}</p>
+            <p className="mt-4 text-brown/80">{producto.descripcion}</p>
           )}
 
           {producto.ingredientes.length > 0 && (
             <>
-              <h2 className="mt-6 font-semibold">Ingredientes</h2>
+              <h2 className="mt-6 font-semibold text-brown-dark">Ingredientes</h2>
               <ul className="mt-2 flex flex-wrap gap-2">
                 {producto.ingredientes.map((ing) => (
                   <li
                     key={ing}
-                    className="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-900"
+                    className="rounded-full bg-cream-dark text-brown-dark px-3 py-1 text-sm"
                   >
                     {ing}
                   </li>

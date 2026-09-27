@@ -14,12 +14,12 @@ export default function AgregarAlPedidoButton({ nombre }: { nombre: string }) {
   return (
     <div className="mt-8">
       <div className="flex flex-wrap items-center gap-4">
-        <div className="flex items-center rounded-full ring-1 ring-stone-300">
+        <div className="flex items-center rounded-full ring-1 ring-teal/40">
           <button
             type="button"
             aria-label="Disminuir cantidad"
             onClick={() => setCantidad((c) => Math.max(1, c - 1))}
-            className="h-10 w-10 text-lg hover:text-amber-800"
+            className="h-10 w-10 text-lg hover:text-teal-dark"
           >
             −
           </button>
@@ -28,7 +28,7 @@ export default function AgregarAlPedidoButton({ nombre }: { nombre: string }) {
             type="button"
             aria-label="Aumentar cantidad"
             onClick={() => setCantidad((c) => c + 1)}
-            className="h-10 w-10 text-lg hover:text-amber-800"
+            className="h-10 w-10 text-lg hover:text-teal-dark"
           >
             +
           </button>
@@ -37,7 +37,7 @@ export default function AgregarAlPedidoButton({ nombre }: { nombre: string }) {
         <button
           type="button"
           onClick={agregar}
-          className="rounded-full bg-amber-700 px-6 py-2.5 font-semibold text-white transition hover:bg-amber-800"
+          className="rounded-full bg-teal-dark px-6 py-2.5 font-semibold text-white transition hover:opacity-90"
         >
           Agregar al pedido
         </button>
