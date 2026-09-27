@@ -69,7 +69,7 @@ export async function POST(request: Request) {
 
       <p style="margin-top:16px;font-size:1.1em;"><strong>Total: $${total.toFixed(2)}</strong></p>
       <p style="margin-top:4px;font-size:0.85em;color:#6c452f;">
-        * No incluye envío. El costo se cotiza aparte según la ubicación del cliente.
+        * No incluye envío. El costo se cotiza aparte según la ubicación del cliente. (sujetos a existencias y disponibilidad)
       </p>
     </div>
   `;
